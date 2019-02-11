@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>valide name's classmate</title>
+</head>
+<body>
+    <input type="text" id="idInput">
+    <input type="button" value="Check name" onclick="checkValidateName()">
+        <!--Tên một lớp học hợp lệ cần đạt các yêu cầu sau:
+
+        Bắt đầu bằng một ký tự chữ hoa C hoặc A hoặc P
+
+        Không chứa các ký tự đặc biệt
+
+        Theo sau ký tự bắt đầu là 4 ký tự số
+
+        Kết thúc phải là 1 trong những ký tự chữ hoa sau: G, H, I, K, L, M
+
+        Ví dụ tên lớp hợp lệ: C0318G
+
+        Ví dụ tên lớp không hợp lệ: M0318G, P0323A-->
+
+
+
+    <script>
+        function checkValidateName() {
+            let strName=document.getElementById('idInput').value;
+            regex=/^[ABC][0-9]{4}[GHIKLM]$/
+
+            if (regex.test(strName)) {
+                alert("correct");
+            }
+            else alert("Incorrect");
+        }
+    </script>
+</body>
+</html>
